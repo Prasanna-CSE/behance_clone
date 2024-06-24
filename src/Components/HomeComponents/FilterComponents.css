@@ -22,6 +22,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
+    font-weight: bolder;
 }
 .filter-button:hover{
     background-color: #bfbfbf;
@@ -69,6 +70,7 @@
     font-weight: 500;
     cursor: pointer;
     border-color: #cbc9c9;
+    font-weight: bolder;
 }
 .right-place :hover{
         border-color: black;
@@ -79,15 +81,14 @@
 .search-icon{
     margin-left: 40px;
     margin-top: 18px;
-    /* margin-bottom: 100px; */
     position: absolute;
 }
 
 .img-button{
     margin-top: 6px;
     margin-right: 50px;
-    margin-left: 907px;
-    padding: 10px 35px 10px 45px;
+    margin-left: 900px;
+    padding: 10px 30px 10px 45px;
     border: 1px solid #ccc;
     background-color: white;
     color: #333;
@@ -96,5 +97,7 @@
     font-weight: 500;
     cursor: pointer;
     position: absolute;
+    font-weight: bolder;
+    display: flex;
+    gap: 5px;
 }
-

@@ -22,17 +22,17 @@ import '../HomeComponents/FilterComponents.css';
 import '../HomeComponents/HomeComponents.css';
 
 const images = [
-  { src: img10, author: 'Prasanna', likes: 980, views: 1.2 },
+  { src: img0, author: 'Prasanna', likes: 980, views: 1.2 },
   { src: img1, author: 'GiSpirit', likes: 567, views: 2.4 },
   { src: img2, author: 'Thirunav', likes: 768, views: 2.47 },
-  { src: img3, author: 'Balarami', likes: 90, views: 3.5 },
+  { src: img3, author: 'Balaraman', likes: 90, views: 3.5 },
   { src: img4, author: 'Harinil', likes: 450, views: 7.1 },
   { src: img5, author: 'Jaiganeh', likes: 89, views: 5.2 },
   { src: img6, author: 'sethuram', likes: 899, views: 9.8 },
   { src: img7, author: 'Vijayk v', likes: 867, views: 7.7 },
   { src: img8, author: 'Thalaivan', likes: 102, views: 5.5 },
   { src: img9, author: 'senTamil', likes: 100, views: 7 },
-  { src: img0, author: 'Murugann', likes: 888, views: 8.3 },
+  { src: img10, author: 'Murugann', likes: 888, views: 8.3 },
   { src: img11, author: 'Arunparak', likes: 1033, views: 2.4 }
 ];
 
@@ -106,7 +106,7 @@ const HomeComponents = () => {
               </ul>
             </div>
             <div className="navigation-elements">
-              <span className='bell'><MdNotifications className='bell-icon' size={23} /></span>
+              <span className='bell'><MdNotifications className='bell-icon' size={22} /></span>
               <button type="button" className="log-in-button">
                 Log In
               </button>
@@ -134,9 +134,10 @@ const HomeComponents = () => {
               value={searchTerm}
               onChange={handleSearchChange}
             />
-            <button type="button" className="img-button"> <CiImageOn className="img-icon" /> Search by image</button>
+            <button type="button" className="img-button"> <CiImageOn className="img-icon" size={20} /> Search by image</button>
           </div>
           <div className="right-place">
+            <p className='upper'>Sort</p>
             <select name="sort" className="sorting" value={sortOption} onChange={handleSortChange}>
               <option value="option">Recommended</option>
               <option value="likes">Most liked</option>
@@ -155,11 +156,11 @@ const HomeComponents = () => {
                   <p className='author'>{image.author}</p>
                   <div className="like-section">
                     <BiSolidLike className="like-icon" onClick={() => handleLike(index)} />
-                    <span>{imageLikes[index]}</span>
+                    <span className='like-word'>{imageLikes[index]}</span>
                   </div>
                   <div className="view-section">
                     <PiEyeFill className="view-icon" />
-                    <span>{image.views + 'k'}</span>
+                    <span className='view-word'>{image.views + 'k'}</span>
                   </div>
                 </div>
               </div>
