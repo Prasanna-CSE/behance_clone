@@ -1,0 +1,100 @@
+.user-search{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 71px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    /* margin-top: 0.1rem; */
+    z-index: 900;
+    top: -1%;
+}
+.filter-button{
+    margin-top: 10px;
+    /* margin-right: 20px; */
+    /* margin-bottom: 0.5rem; */
+    text-align: center;
+    padding: 15px 40px 19px 50px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.filter-button:hover{
+    background-color: #bfbfbf;
+}
+.filter-icon{
+    padding-left: 30px;
+    position: absolute;
+    padding-top: 25px;
+}
+.left-place{
+    margin-left: 20px;
+    /* border-color: #bfbfbf; */
+}
+.center-place{
+    display: flex;
+    margin-top: 10px;
+    /* text-align: center;
+    justify-content: center; */
+}
+.search-bar{
+    width: 825px;
+    /* align-content: start; */
+    border-radius: 60px;
+    height: 30px;
+    padding: 10px 90px;
+    padding-left: 100px;
+    padding-right: 190px;
+    border: 1px solid #ccc;
+    text-align: start;
+    font-size: large;
+    font-weight: bolder;
+    /* border-color: #bfbfbf; */
+}
+.sorting{
+    /* margin-left: 5px; */
+    margin-top: 0.75rem;
+    margin-right: 20px;
+    margin-bottom: 0.75rem;
+    padding: 15px 30px 15px 30px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    border-radius: 99px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-color: #cbc9c9;
+}
+.right-place :hover{
+        border-color: black;
+}
+.img-button :hover{
+    border-color: black;
+}
+.search-icon{
+    margin-left: 40px;
+    margin-top: 18px;
+    /* margin-bottom: 100px; */
+    position: absolute;
+}
+
+.img-button{
+    margin-top: 6px;
+    margin-right: 50px;
+    margin-left: 907px;
+    padding: 10px 35px 10px 45px;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+}
+

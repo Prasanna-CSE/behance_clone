@@ -1,0 +1,72 @@
+.footer-container{
+    display: flex;
+    background-color: #191919;
+    color: white;
+    height: 500px;
+    font-family: artico;
+    border-bottom: 1px solid white;
+}
+.behance-container{
+    width: 35%;
+}
+.behance{
+    padding-top: 70px;
+    width: 250px;
+    padding-left: 30px;
+}
+a{
+    color: white;
+    padding-bottom: 100px;
+    text-decoration: none;
+    /* background-color: aqua; */
+}
+ul{
+    list-style: none;
+}
+.container-1{
+    padding-top: 50px;
+    margin-top: 30px;
+    width: 20%;
+    font-size: large;
+}
+.title{
+    margin-bottom: 30px;
+}
+.box-1{
+    /* padding-bottom: 10px; */
+    padding-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: aliceblue; */
+}
+.box-1:hover a {
+    text-decoration: underline;
+}
+.footer-2{
+    display: flex;
+    background-color: #191919;
+    color: white;
+    height: 100px;
+    /* flex-direction: row; */
+    /* display: inline; */
+}
+.left{
+    display: flex;
+    flex-direction: row;
+}
+.adobe{
+    padding-top: 40px;
+    padding-right: 10px;
+    padding-left: 30px;
+}
+.para{
+    padding-top: 25px;
+    padding-right: 300px;
+}
+.box-2{
+     padding-right: 35px;
+     padding-top: 40px;
+     height: -40px;
+}
+.box-2:hover{
+    text-decoration: underline;
+}
