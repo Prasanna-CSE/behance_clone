@@ -5,41 +5,17 @@ import { FaSearch } from "react-icons/fa";
 import { CiImageOn } from "react-icons/ci";
 import { BiSolidLike } from "react-icons/bi";
 import { PiEyeFill } from "react-icons/pi";
-import img0 from '../../assets/images/img0.png';
-import img1 from '../../assets/images/img1.png';
-import img2 from '../../assets/images/img2.png';
-import img3 from '../../assets/images/img3.png';
-import img4 from '../../assets/images/img4.png';
-import img5 from '../../assets/images/img5.png';
-import img6 from '../../assets/images/img6.png';
-import img7 from '../../assets/images/img7.png';
-import img8 from '../../assets/images/img8.png';
-import img9 from '../../assets/images/img9.png';
-import img10 from '../../assets/images/img10.png';
-import img11 from '../../assets/images/img11.png';
+import { MdSave } from "react-icons/md"; 
+import images from '../../Data/Data.js'
 import '../HomeComponents/NavigationComponents.css';
 import '../HomeComponents/FilterComponents.css';
 import '../HomeComponents/HomeComponents.css';
-
-const images = [
-  { src: img0, author: 'Prasanna', likes: 980, views: 1.2 },
-  { src: img1, author: 'GiSpirit', likes: 567, views: 2.4 },
-  { src: img2, author: 'Thirunav', likes: 768, views: 2.47 },
-  { src: img3, author: 'Balaraman', likes: 90, views: 3.5 },
-  { src: img4, author: 'Harinil', likes: 450, views: 7.1 },
-  { src: img5, author: 'Jaiganeh', likes: 89, views: 5.2 },
-  { src: img6, author: 'sethuram', likes: 899, views: 9.8 },
-  { src: img7, author: 'Vijayk v', likes: 867, views: 7.7 },
-  { src: img8, author: 'Thalaivan', likes: 102, views: 5.5 },
-  { src: img9, author: 'senTamil', likes: 100, views: 7 },
-  { src: img10, author: 'Murugann', likes: 888, views: 8.3 },
-  { src: img11, author: 'Arunparak', likes: 1033, views: 2.4 }
-];
 
 const HomeComponents = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageLikes, setImageLikes] = useState(images.map(image => image.likes));
   const [searchTerm, setSearchTerm] = useState('');
+  const [searchRecommendations, setSearchRecommendations] = useState([]);
   const [sortOption, setSortOption] = useState('option');
 
   const openModal = (image) => {
@@ -57,11 +33,25 @@ const HomeComponents = () => {
   };
 
   const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+    const value = e.target.value;
+    setSearchTerm(value);
+    if (value.length > 0) {
+      const recommendations = images
+        .filter(image => image.author.toLowerCase().includes(value.toLowerCase()))
+        .map(image => image.author);
+      setSearchRecommendations(recommendations);
+    } else {
+      setSearchRecommendations([]);
+    }
   };
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
+  };
+
+  const handleRecommendationClick = (author) => {
+    setSearchTerm(author);
+    setSearchRecommendations([]);
   };
 
   const filteredImages = images.filter(image =>
@@ -135,6 +125,15 @@ const HomeComponents = () => {
               onChange={handleSearchChange}
             />
             <button type="button" className="img-button"> <CiImageOn className="img-icon" size={20} /> Search by image</button>
+            {searchRecommendations.length > 0 && (
+              <ul className="recommendations">
+                {searchRecommendations.map((rec, index) => (
+                  <li key={index} onClick={() => handleRecommendationClick(rec)}>
+                    {rec}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="right-place">
             <p className='upper'>Sort</p>
@@ -152,6 +151,10 @@ const HomeComponents = () => {
             {sortedImages.map((image, index) => (
               <div key={index} className="image-item">
                 <img src={image.src} alt={`Image by ${image.author}`} onClick={() => openModal(image)} />
+                <div className="save-icon">
+                  <MdSave />
+                  <span>Save</span>
+                </div>
                 <div className="image-details">
                   <p className='author'>{image.author}</p>
                   <div className="like-section">

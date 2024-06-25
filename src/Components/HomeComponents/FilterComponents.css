@@ -39,6 +39,7 @@
 .center-place{
     display: flex;
     margin-top: 10px;
+    position: relative;
     /* text-align: center;
     justify-content: center; */
 }
@@ -86,7 +87,7 @@
 
 .img-button{
     margin-top: 6px;
-    margin-right: 50px;
+    /* margin-right: px; */
     margin-left: 900px;
     padding: 10px 30px 10px 45px;
     border: 1px solid #ccc;

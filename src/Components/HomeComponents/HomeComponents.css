@@ -44,8 +44,8 @@
   
   .like-section, .view-section {
     display: flex;
-    /* align-items: center;
-    justify-content: end; */
+    align-items: center;
+    justify-content: end;
   }
   
   .like-section span, .view-section span {
@@ -169,5 +169,28 @@
   
   .image-item:hover .save-icon {
     opacity: 1;
+  }
+  .recommendations {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    top: 100%;
+  }
+  
+  .recommendations li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .recommendations li:hover {
+    background-color: #f0f0f0;
   }
   
